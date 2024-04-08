@@ -1,5 +1,5 @@
 import './App.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Form from './Form'
 import Appointment from './Appointment'
 import { fetchAppts } from './apiCalls'
@@ -7,15 +7,6 @@ import { fetchAppts } from './apiCalls'
 function App() {
   const [appts, setAppts] = useState([])
 
-  // useEffect(() => {
-  //   fetchAppts()
-  //   .then(data => {
-  //     setAppts(...appts, setAppts(data))
-  //   })
-  // })
-  useEffect(() => {
-    
-  })
   function addAppt(newAppt) {
     setAppts([...appts, newAppt])
   }
@@ -24,6 +15,8 @@ function App() {
   function deleteAppt(id) {
     const removedAppts = appts.filter(appt => appt.id !== id)
     console.log('removed', removedAppts)
+    //expect an array with just Mercury after deleting mer
+    //expect an array of nothing after also deleting Mercury
     setAppts(removedAppts)
   }
 
