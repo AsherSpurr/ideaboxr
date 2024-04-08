@@ -5,10 +5,15 @@ function Form({addAppt}) {
     const [pet, setPet] = useState('')
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
+    const [id, setId] = useState(0)
 
     function submitAppt(e) {
         e.preventDefault()
+        let counter = 0;
+        counter++
+        setId(counter)
         const newAppt = {
+            id: id,
             pet: pet,
             date: date,
             time: time
@@ -52,4 +57,3 @@ function Form({addAppt}) {
 }
 
 export default Form;
-

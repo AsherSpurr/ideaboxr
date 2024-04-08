@@ -6,20 +6,20 @@ function Appointment({ appts, deleteAppt }) {
     const mappedAppts = appts.map((appt) => {
         return (
             <Card
+                id={appt.id}
                 pet={appt.pet}
                 date={appt.date}
                 time={appt.time}
                 deleteAppt={deleteAppt}
-                id={Date.now()}
                 key={Date.now()}
             />
         )
     })
 
     return (
-        <div>
-            {mappedAppts}
-        </div>
+    <div>
+        {mappedAppts}
+    </div>
     )
 }
 

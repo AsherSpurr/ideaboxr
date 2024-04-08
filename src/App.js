@@ -10,16 +10,20 @@ function App() {
   // useEffect(() => {
   //   fetchAppts()
   //   .then(data => {
-  //     setAppts(data)
+  //     setAppts(...appts, setAppts(data))
   //   })
   // })
-
+  useEffect(() => {
+    
+  })
   function addAppt(newAppt) {
     setAppts([...appts, newAppt])
   }
+  console.log(appts)
 
   function deleteAppt(id) {
     const removedAppts = appts.filter(appt => appt.id !== id)
+    console.log('removed', removedAppts)
     setAppts(removedAppts)
   }
 

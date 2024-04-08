@@ -1,6 +1,6 @@
 import './Card.css'
 
-function Card({pet, date, time, deleteAppt, id}) {
+function Card({ pet, date, time, id, deleteAppt}) {
 
     function formatTime(time) {
         const splitTime = time.split(':')
@@ -13,7 +13,7 @@ function Card({pet, date, time, deleteAppt, id}) {
 
     return (
         <div className="card">
-            <h1>{pet}</h1>
+            <h3>{pet}</h3>
             <p>{date}</p>
             <p>{formatTime(time)}</p>
             <button onClick={() => deleteAppt(id)}>🗑️</button>
