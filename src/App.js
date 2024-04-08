@@ -10,13 +10,9 @@ function App() {
   function addAppt(newAppt) {
     setAppts([...appts, newAppt])
   }
-  console.log(appts)
 
   function deleteAppt(id) {
     const removedAppts = appts.filter(appt => appt.id !== id)
-    console.log('removed', removedAppts)
-    //expect an array with just Mercury after deleting mer
-    //expect an array of nothing after also deleting Mercury
     setAppts(removedAppts)
   }
 

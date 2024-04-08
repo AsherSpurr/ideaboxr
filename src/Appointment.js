@@ -11,7 +11,7 @@ function Appointment({ appts, deleteAppt }) {
                 date={appt.date}
                 time={appt.time}
                 deleteAppt={deleteAppt}
-                key={Date.now()}
+                key={appt.id}
             />
         )
     })
